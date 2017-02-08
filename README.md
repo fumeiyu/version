@@ -3,6 +3,8 @@
 生成文件的目录为LogFiles\Version newVersionFile.TXT 最后更新的文件json列表
 
 webconfig  配置  system.webServer 节点下
- <handlers>
+```
+    <handlers>
       <add path="_version/*.ashx" name="ashx" verb="*" type="Common.Version.VersionHandler,Common.Version" ></add>
     </handlers>
+```
