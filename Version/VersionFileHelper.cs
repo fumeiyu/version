@@ -54,7 +54,7 @@ namespace Common.Version
         }
 
         public static string Read(string FileName) { 
-             FileName = getFile(FileName);
+            FileName = getFile(FileName);
             if (!System.IO.File.Exists(FileName)) {
                 return "";
             }
@@ -62,6 +62,18 @@ namespace Common.Version
             using (StreamReader sr = new StreamReader(FileName))
             {
               return  sr.ReadToEnd();
+            }
+        }
+
+        public static string ReadFile(string FullName) {
+            if (!System.IO.File.Exists(FullName))
+            {
+                return "";
+            }
+
+            using (StreamReader sr = new StreamReader(FullName))
+            {
+                return sr.ReadToEnd();
             }
         }
     }

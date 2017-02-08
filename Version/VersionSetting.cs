@@ -13,7 +13,7 @@ namespace Common.Version
         public string[] incudeFileExtension;
         public static VersionSetting Instance() {
             if (version == null) {
-                 version= Newtonsoft.Json.JsonConvert.DeserializeObject<VersionSetting>( VersionFileHelper.Read(   System.AppDomain.CurrentDomain.BaseDirectory + "/bin/versionAppSetting.json"));
+                 version= Newtonsoft.Json.JsonConvert.DeserializeObject<VersionSetting>( VersionFileHelper.ReadFile(   System.AppDomain.CurrentDomain.BaseDirectory + "bin/versionAppSetting.json"));
             }
             return version;
         }
